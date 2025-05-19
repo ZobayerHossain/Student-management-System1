@@ -1,22 +1,14 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Login - Student Management System</title>
-    <link rel="stylesheet" href="CSS/student.css">
-</head>
+<head><title>Login</title></head>
 <body>
     <h2>Login</h2>
-    <?php if (!empty($error)): ?>
-        <p style="color: red;"><?= htmlspecialchars($error) ?></p>
-    <?php endif; ?>
-    <form method="POST" action="index.php?page=login_submit">
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
-
+    <form method="POST" action="index.php?page=login_action">
+        <label>Email:</label><input type="email" name="email" required>
+        <label>Password:</label><input type="password" name="password" required>
         <button type="submit">Login</button>
     </form>
+    <a href="index.php?page=signup">Sign up</a> |
+    <a href="index.php?page=forgot_password">Forgot Password?</a>
 </body>
 </html>
